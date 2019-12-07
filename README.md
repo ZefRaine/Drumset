@@ -1,2 +1,2 @@
 # Drumset
-Virtual Drumset created with vanilla Javascript.
+Virtual drumset created with vanilla Javascript.
