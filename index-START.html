@@ -59,25 +59,8 @@
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
-  <script>
-    window.addEventListener('keydown', function (e) {
-      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-      if(!audio) return; // stop the function from running if data-key has no audio associate with it's keyCode
-      audio.currentTime = 0; // allows audio to rewind each time a key is pressed
-      audio.play();
-      key.classList.add('playing');
-    });
-    function removeTransition(e) {
-      if(e.propertyName !== 'transform') return; //skip if not a transform
-      console.log(e.propertyName);
-    }
-
-    const keys = document.querySelectorAll('.key');
-    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-  </script>
 </body>
 
-<!-- <script src="logic.js"></script> -->
+<script src="logic.js"></script>
 
 </html>
